@@ -7,10 +7,10 @@
 
 body {
 	width: 90vw;
-	height: 90vh;
+	height: 95vh;
 	border: 1px solid #c7c7c7;
 	margin: auto;
-	margin-top: 5vh;
+	margin-top: 2.5vh;
 }
 
 header {
@@ -144,4 +144,5 @@ h4 {
 	color: #ffffff;
 	font-size: 1.2em;
 	border-radius: 4px;
+	box-shadow: .07em .07em .07em .07em #eeeeee;
 }
