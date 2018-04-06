@@ -125,6 +125,16 @@ h4 {
 
 .price__item, .price__expenses, .price__total {
 	display: flex;
+	margin-bottom: 25px;
+}
+
+.price__expenses, .price__total {
+	justify-content: space-between;
+}
+
+.price__title-medium {
+	font-size: 1.2em;
+	margin-right: 30px;
 }
 
 .price__button-buy {
