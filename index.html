@@ -6,15 +6,15 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Rissoto de setas</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<header>
 			<div class="header__container">
-				<p class="paragraph__container-grey">INGREDIENTES</p>
-				<h1>Nombre del plato</h1>
+				<p class="paragraph__container-grey">INGREDIENTES
+				</p>
+				<h1 class="roboto-slab">Nombre del plato</h1>
 				<div class="selections__container">
 					<p>Seleccionar todo</p>
 					<p>&nbsp|&nbsp</p>
@@ -25,26 +25,36 @@
 		<main>
 			<div class="itemsList__container">
 				<div class="item__container">
-					<input type="checkbox" name="add-ingredient">
-					<input type="text" name="number-ingredients">
-					<div>
-						<h4>Artículo</h4>
-						<p>Marca</p>
-						<p>X kg.</p>
+					<input class="item__checkbox" type="checkbox" name="add-ingredient">
+					<input class="item__input" type="text" name="number-ingredients">
+					<div class="item__details">
+						<h4 class="roboto-slab">Artículo</h4>
+						<p class="item__paragraph-c7">Marca</p>
+						<p class="item__paragraph-grey">X kg.</p>
 					</div>
-					<h3>X,XX €</h3>
+					<h3 class="item__price">X,XX €</h3>
 				</div>
 			</div>
-			</div>
 			<div class="price__container">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<button>Comprar ingredientes:</button>
+				<div class="price__item">
+					<p>Items:</p>
+					<p>1</p>
+				</div>
+				<div class="price__expenses">
+					<p>Subtotal</p>
+					<p>2,95€</p>
+				</div>
+				<div class="price__expenses">
+					<p>Gastos de envío</p>
+					<p>7,00€</p>
+				</div>
+				<div class="price__total">
+					<p>Total</p>
+					<p>9,95€</p>
+				</div>
+				<button class="price__button-buy">Comprar ingredientes: 9,95€</button>
 			</div>
 		</main>
-		<script src="/js/index.js">
-		</script>
+	<script src="/js/index.js"></script>
 	</body>
 </html>

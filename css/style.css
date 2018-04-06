@@ -2,26 +2,25 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Roboto', serif;
+	font-family: "Roboto", serif;
 }
 
 body {
 	width: 90vw;
 	height: 90vh;
-	border: 1px solid grey;
+	border: 1px solid #c7c7c7;
 	margin: auto;
 	margin-top: 5vh;
 }
 
 header {
 	height: 15vh;
-	border-bottom: 1px solid grey;
+	border-bottom: 1px solid #6fa7e6;
 }
 
 .header__container {
-	width: 80%;
-	margin: auto;
 	margin-top: 5vh;
+	margin-left: 40px;
 }
 
 .paragraph__container-grey {
@@ -29,9 +28,8 @@ header {
 	font-size: .8em;
 }
 
-h1 {
-	font-family: 'Roboto Slab', serif;
-	font-size: 2em;
+.roboto-slab {
+	font-family: "Roboto Slab", serif;
 }
 
 .selections__container {
@@ -43,9 +41,97 @@ h1 {
 
 .itemsList__container {
 	height: 30vh;
-	border-bottom: 1px solid grey;
+	border-bottom: 1px solid #c7c7c7;
 }
 
 .item__container {
-	
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #c7c7c7;
+}
+
+.item__container:hover {
+	background-color: #eeeeee;
+}
+
+.item__checkbox {
+	-webkit-appearance: none;
+	width: 15px;
+	height: 15px;
+	outline: none;
+	border: 1px solid grey;
+	border-radius: 2px;
+	box-shadow: .07em .07em .07em .07em #c7c7c7;
+	padding-left: 2px;
+	margin-left: 10px;
+}
+
+.item__checkbox:checked {
+	background-color: #6fa7e6;
+	color: #ffffff;
+}
+
+.item__checkbox:checked:after {
+	content: '✓';
+	position: absolute;
+}
+
+.item__input {
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid grey;
+	border-radius: 2px;
+	outline: none;
+	font-size: 1.7em;
+	text-align: center;
+	color: #6fa7e6;
+}
+
+.item__details {
+	margin-left: 10px;
+	flex-grow: 2
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+.item__paragraph-c7 {
+	font-size: .9em;
+	color: #c7c7c7;
+}
+
+.item__paragraph-grey {
+	font-size: .9em;
+	color: grey;
+}
+
+.item__price {
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #4a791c;
+	margin-right: 30px;
+}
+
+.price__container {
+	margin-left: 40px;
+	margin-top: 5vh;
+}
+
+.price__item, .price__expenses, .price__total {
+	display: flex;
+}
+
+.price__button-buy {
+	width: 90%;
+	height: 50px;
+	background-color: #4a791c;
+	color: #ffffff;
+	font-size: 1.2em;
+	border-radius: 4px;
 }
