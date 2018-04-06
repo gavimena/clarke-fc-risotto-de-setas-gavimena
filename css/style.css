@@ -1,0 +1,51 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', serif;
+}
+
+body {
+	width: 90vw;
+	height: 90vh;
+	border: 1px solid grey;
+	margin: auto;
+	margin-top: 5vh;
+}
+
+header {
+	height: 15vh;
+	border-bottom: 1px solid grey;
+}
+
+.header__container {
+	width: 80%;
+	margin: auto;
+	margin-top: 5vh;
+}
+
+.paragraph__container-grey {
+	color: grey;
+	font-size: .8em;
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 2em;
+}
+
+.selections__container {
+	margin-top: 20px;
+	display: flex;
+	font-size: .9em;
+	color: #6fa7e6;
+}
+
+.itemsList__container {
+	height: 30vh;
+	border-bottom: 1px solid grey;
+}
+
+.item__container {
+	
+}
