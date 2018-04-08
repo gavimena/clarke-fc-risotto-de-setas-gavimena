@@ -8,8 +8,12 @@ let input = document.querySelector('.item__input');
 let selectAll = document.getElementById('select-all');
 let deselectAll = document.getElementById('deselect-all');
 
-selectAll.addEventListener('click', toggleSelection(true));
-deselectAll.addEventListener('click', toggleSelection(false));
+selectAll.addEventListener('click', function() {
+	toggleSelection(true);
+});
+deselectAll.addEventListener('click', function() {
+	toggleSelection(false);
+});
 
 fetch('https://raw.githubusercontent.com/Adalab/recipes-data/master/rissoto-setas.json')
 	.then(function(response){
