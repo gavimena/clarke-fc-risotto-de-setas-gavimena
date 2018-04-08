@@ -8,6 +8,7 @@ var app = function (config) {
 	let deselectAll = document.getElementById('deselect-all');
 	let itemsCount=0;
 	let itemCount = document.querySelector('.item-count');
+	let subtotal = document.querySelector('.subtotal');
 
 	selectAll.addEventListener('click', function() {
 		toggleSelection(true);
@@ -36,6 +37,7 @@ var app = function (config) {
 					<p class="item__paragraph-grey">${ingredient.quantity}</p>
 				</div>
 				<h3 class="item__price">${ingredient.price} €</h3>
+				<input type="hidden" value="${ingredient.price}" />
 			</div>`;
 		}
 
@@ -69,25 +71,42 @@ var app = function (config) {
 			console.log(checkbox);
 			checkbox.addEventListener('click', handleCheckIngredient)
 		});
+
+		let itemInputList = document.querySelectorAll('.item__input');
+		itemInputList.forEach(function(input){
+			console.log(input);
+			input.addEventListener('change', handleItemChange)
+		});
 	}
 
+	function handleItemChange(e){
+		let itemInputEl = event.target;
+		let itemInputValue = event.target.value;
+		let priceEl = itemInputEl.parentElement.children[3];
+		let unitPriceEl = itemInputEl.parentElement.children[4];
+		let unitPriceValue = parseFloat(unitPriceEl.value);
+
+		const itemTotalPrice = itemInputValue * unitPriceValue;
+		priceEl.innerText = `${itemTotalPrice.toFixed(2)} €`;
+	}
 
 	function handleCheckIngredient(e){
 		let checkbox = event.target
 		console.log("value", checkbox);
 		let input = checkbox.parentElement.children[1];
-		console.log("input", input);
 
 		let inputValue = parseInt(input.value);
 		console.log('inputValue:',inputValue);
 
-	 	itemsCount= (checkbox.checked) ? itemsCount + inputValue:
-		itemsCount - inputValue;
+		if (checkbox.checked) {
+			itemsCount += inputValue;
+		} else {
+			itemsCount -= inputValue;
+		}
 		itemCount.innerHTML = itemsCount;
+
 		console.log(itemsCount);
-
 	}
-
 }
 
 

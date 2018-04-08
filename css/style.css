@@ -53,7 +53,7 @@ span, button {
 	padding-bottom: 10px;
 	display: flex;
 	display: grid;
-	grid-template-columns: 30px 60px 1fr 100px;
+	grid-template-columns: 30px 60px 1fr 110px;
 	grid-gap: 10px;
 	align-items: center;
 	border-bottom: 1px solid #c7c7c7;
