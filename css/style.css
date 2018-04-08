@@ -7,7 +7,6 @@
 
 body {
 	width: 90vw;
-	/* height: 95vh; */
 	border: 1px solid #c7c7c7;
 	margin: auto;
 	margin-top: 2.5vh;
@@ -39,8 +38,11 @@ header {
 	color: #6fa7e6;
 }
 
+span, button {
+	cursor: pointer;
+}
+
 .itemsList__container {
-	/* height: 30vh; */
 	border-bottom: 1px solid #c7c7c7;
 	display: flex;
 	flex-direction: column;
@@ -51,16 +53,15 @@ header {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	display: flex;
+	display: grid;
+	grid-template-columns: 30px 60px 1fr 100px;
+	grid-gap: 10px;
 	align-items: center;
 	border-bottom: 1px solid #c7c7c7;
 }
 
 .item__container:hover {
 	background-color: #eeeeee;
-}
-
-.item__container:last-child {
-	border-bottom: none;
 }
 
 .item__checkbox {
@@ -88,19 +89,12 @@ header {
 .item__input {
 	width: 50px;
 	height: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
 	border: 1px solid grey;
 	border-radius: 2px;
 	outline: none;
 	font-size: 1.7em;
 	text-align: center;
 	color: #6fa7e6;
-}
-
-.item__details {
-	margin-left: 10px;
-	flex-grow: 2
 }
 
 h4 {
@@ -122,6 +116,7 @@ h4 {
 	font-weight: 300;
 	color: #4a791c;
 	margin-right: 30px;
+	text-align: right;
 }
 
 .price__container {
