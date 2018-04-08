@@ -1,4 +1,4 @@
-var app = function (config) {
+var app = function() {
 
 	let mainTitle = document.getElementById('main-title');
 	let itemListContainer =
@@ -26,6 +26,7 @@ var app = function (config) {
 			renderItems(json);
 		});
 
+
 	function renderIngredient(ingredient){
 		return `
 			<div class="item__container">
@@ -41,6 +42,7 @@ var app = function (config) {
 			</div>`;
 		}
 
+
 	function renderItems(itemsJson) {
 		console.log(itemsJson);
 		const recipe = itemsJson.recipe;
@@ -55,7 +57,6 @@ var app = function (config) {
 		registerEvents();
 	}
 
-	// let checkBoxList = document.querySelectorAll('.item__checkbox');
 
 	function toggleSelection(value){
 		let checkBoxList = document.querySelectorAll('.item__checkbox');
@@ -79,6 +80,7 @@ var app = function (config) {
 		});
 	}
 
+
 	function handleItemChange(e){
 		let itemInputEl = event.target;
 		let itemInputValue = event.target.value;
@@ -89,6 +91,7 @@ var app = function (config) {
 		const itemTotalPrice = itemInputValue * unitPriceValue;
 		priceEl.innerText = `${itemTotalPrice.toFixed(2)} €`;
 	}
+
 
 	function handleCheckIngredient(e){
 		let checkbox = event.target
@@ -107,6 +110,8 @@ var app = function (config) {
 
 		console.log(itemsCount);
 	}
+
+
 }
 
 
