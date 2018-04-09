@@ -75,13 +75,11 @@ var app = function() {
 	function registerEvents(){
 		let checkBoxList = document.querySelectorAll('.item__checkbox');
 		checkBoxList.forEach(function(checkbox){
-			console.log(checkbox);
 			checkbox.addEventListener('click', handleCheckIngredient)
 		});
 
 		let itemInputList = document.querySelectorAll('.item__input');
 		itemInputList.forEach(function(input){
-			console.log(input);
 			input.addEventListener('change', handleItemChange)
 		});
 	}
