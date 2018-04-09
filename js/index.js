@@ -9,6 +9,12 @@ var app = function() {
 	let itemsCount=0;
 	let itemCount = document.querySelector('.item-count');
 	let subtotal = document.querySelector('.subtotal');
+	let itemsSubtotal=0;
+	let sendPrice = document.querySelector('.send');
+	let sendPriceValue = parseInt(sendPrice.innerText);
+	let total = document.querySelector('.item__price');
+	let totalButton = document.querySelector('.price__button-buy');
+	// let totalButtonValue = totalButton.innerText;
 
 	selectAll.addEventListener('click', function() {
 		toggleSelection(true);
@@ -95,16 +101,27 @@ var app = function() {
 
 	function handleCheckIngredient(e){
 		let checkbox = event.target
-		console.log("value", checkbox);
 		let input = checkbox.parentElement.children[1];
-
 		let inputValue = parseInt(input.value);
-		console.log('inputValue:',inputValue);
+		let itemTotalPrice = checkbox.parentElement.children[3];
+		let itemTotalPriceValue = parseFloat(itemTotalPrice.innerText);
+		let totalValue = total.innerText;
+		let totalPrice=0;
 
 		if (checkbox.checked) {
 			itemsCount += inputValue;
+			itemsSubtotal += itemTotalPriceValue;
+			subtotal.innerHTML = `${itemsSubtotal.toFixed(2)} €`;
+			totalPrice = itemsSubtotal + sendPriceValue;
+			total.innerHTML = `${totalPrice.toFixed(2)} €`;
+			totalButton.innerHTML = `Comprar ingredientes: ${totalPrice.toFixed(2)} €`;
 		} else {
 			itemsCount -= inputValue;
+			itemsSubtotal -= itemTotalPriceValue;
+			subtotal.innerHTML = `${itemsSubtotal.toFixed(2)} €`;
+			totalPrice = itemsSubtotal + sendPriceValue;
+			total.innerHTML = `${totalPrice.toFixed(2)} €`;
+			totalButton.innerHTML = `Comprar ingredientes: ${totalPrice.toFixed(2)} €`;
 		}
 		itemCount.innerHTML = itemsCount;
 
